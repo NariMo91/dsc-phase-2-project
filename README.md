@@ -2,10 +2,10 @@
 **Author**: Laura Miller
 
 ## Overview
-This project is a multiple linear regression analysis of housing data from King County, where multiple features about homes are used to predict housing processes. A regression model should help King Realty advise homeowners on how to increase the estimated values of their homes through renovation, and by what amount. 
+This project is a multiple linear regression analysis of housing data from King County, where multiple features about homes are used to predict housing prices. A regression model should help King Realty advise homeowners on how to increase the estimated values of their homes through renovation.
 
 ## Business Problem
-The stakeholder is King Realty, a new real estate agency that will help homeowners buy and sell homes. The agency wants a means to do this that is based in real-world data. The product of the analysis should help a client learn:
+The stakeholder is King Realty (fictitious real estate agency), who wants a means to help homeowners buy and sell homes that is based in real-world data. The product of the analysis should help a client learn:
 - The current value of their home, prior to any renovation project
 - The estimated value of their home after various kinds of renovations
 
@@ -276,21 +276,3 @@ For a 2 unit decrease in `bed_bath_ratio`, there is a 6.96% increase in price fo
 
 The product of this project was a model for predicting housing prices based on various home features. The final model had an $R^2$ and adjusted $R^2$ of 0.819, no p-values over 0.05, and no issues with multicolinearity according to the correlation heatmap.
 The final model could be tuned further in terms of the normality of its residuals, perhaps through the removal of additional outliers that disrupt the linear relationship of X feature with price. Experimenting with additional features to drop versus keep may also lead to improvements in model performance, the qq plot, or RMSE values. Currently, RMSE reveals that the model can be ~$157K off in its predictions of home value, which might not be too much of a problem for very high valued homes (4M+), but is troubling for lesser-valued homes. Therefore, RMSE should be reduced in future iterations. The test case revealed that `yr_renovated` may be a better feature to keep in the model than `yrs_since_reno` in order to avoid the need for additional calculations. I would repeat the modeling process using `yr_renovated` instead. 
-
-
-```python
-jupyter nbconvert --to markdown README.ipynb
-```
-
-
-      File "<ipython-input-1-3c9a2e22f0f1>", line 1
-        jupyter nbconvert --to markdown README.ipynb
-                ^
-    SyntaxError: invalid syntax
-
-
-
-
-```python
-
-```
